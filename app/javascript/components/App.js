@@ -4,16 +4,20 @@ import {
   BrowserRouter as Router, 
   Routes,
   Route,
-} from 'react-router-dom'
-import Greeting from './Greeting'
+} from 'react-router-dom';
+import { Provider } from "react-redux";
+import Greeting from './Greeting';
+import store from "../Redux/configureStore";
 class App extends React.Component {
   render () {
     return (
+      <Provider store={store}>
       <Router>
         <Routes>
-          <Route path='/' exact element={<Greeting message={"hello,world!"} />} />
+          <Route path='/' exact element={<Greeting />} />
         </Routes>
       </Router>
+      </Provider>
     );
   }
 }
