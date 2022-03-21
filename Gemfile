@@ -72,5 +72,6 @@ group :test do
 end
 
 gem 'react-rails'
+gem 'webpacker'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
